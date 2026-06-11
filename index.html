@@ -1,120 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechShop - Магазин гаджетів</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-<header class="header">
-  <div class="logo">TechShop</div>
-       
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li><a href="#">Головна</a></li>
-      <li><a href="#">Каталог</a></li>
-      <li><a href="#">Про нас</a></li>
-    </ul>
-  </nav>
 
-  <div class="user-actions">
-    <button class="btn btn-cart">Кошик (0)</button>
-  </div>
+<header class="header">
+    <div class="logo">TechShop</div>
+
+    <button class="menu-toggle">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="10"></rect>
+            <rect y="30" width="100" height="20" rx="10"></rect>
+            <rect y="60" width="100" height="20" rx="10"></rect>
+        </svg>
+    </button>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions">
+        <button class="btn btn-cart">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <circle cx="16.5" cy="18.5" r="1.5"/>
+                <circle cx="9.5" cy="18.5" r="1.5"/>
+                <path d="M18 16H8a1 1 0 0 1-.958-.713L4.256 6H3a1 1 0 0 1 0-2h2a1 1 0 0 1 .958.713L6.344 6H21a1 1 0 0 1 .937 1.352l-3 8A1 1 0 0 1 18 16z"/>
+            </svg>
+            Кошик
+        </button></div>
 </header>
 
 <main class="page-layout">
-    
     <section class="hero">
-        <h1>Welcome!</h1> 
-        <a href="#" class="btn">Купити</a>
+        <h1>Welcome!</h1>
+        <a href="checkout.html" class="btn">Купити</a>
     </section>
 
     <aside class="sidebar">
-            <h3>Фільтри</h3>
-            <!-- Тут будуть чекбокси категорій, напр. Ноутбуки, Смартфони -->
+        <div class="filter-group">
+            <h2>Категорії</h2>
             <ul>
-                <li><input type="checkbox" /> Ноутбуки</li>
-                <li><input type="checkbox" /> Смартфони</li>
+                <li><label><input type="checkbox"> Ноутбуки</label></li>
+                <li><label><input type="checkbox"> Смартфони</label></li>
+                <li><label><input type="checkbox"> Побутова техніка</label></li>
             </ul>
+        </div>
+
+        <div class="filter-group">
+            <h2>Бренди</h2>
+            <ul>
+                <li><label><input type="checkbox"> Apple</label></li>
+                <li><label><input type="checkbox"> Samsung</label></li>
+                <li><label><input type="checkbox"> Bosch</label></li>
+            </ul>
+        </div>
     </aside>
 
-    <section>
-        <h2><a href="index.html" class="logo">Новинки 2025</a></h2>
-    </section>
-
-    
+    <section class="products-content">
         
-        <section class="products-content">
+        <div class="products-section">
+            <h2>Новинки 2026</h2>
+            <div class="products-grid">
+                
+                <article class="products-card">
+                    <span class="product-badge badge-new">Новинка</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4XzsqwgVl7gqpyJpspzNiuCHjdkF_nJ5qWA&s" class="product-img" alt="Galaxy S21">
+                    <h3>Смартфон Galaxy S21</h3>
+                    <p>Потужний процесор та неймовірна камера.</p>
+                    <div class="product-footer">
+                        <span>25 000 грн</span>
+                        <button class="btn-buy">Купити</button>
+                    </div>
+                </article>
+
+                <article class="products-card">
+                    <span class="product-badge badge-new">Новинка</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmF7ROju0dYMmBSejvtVCEAEdkJGClfLNOKA&s" class="product-img" alt="Мультипіч Bosch">
+                    <h3>Мультипіч Bosch</h3>
+                    <p>Сучасна мультипіч для кухні.</p>
+                    <div class="product-footer">
+                        <span>5 000 грн</span>
+                        <button class="btn-buy">Купити</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="products-section">
             <h2>Популярні товари</h2>
             <div class="products-grid">
-                <!-- Ваші картки <article> -->
-                <article class="products-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4XzsqwgVl7gqpyJpspzNiuCHjdkF_nJ5qWA&s" alt="Product Name" class="product-img">
-                    <h3 class="product-title">Смартфон Galaxy S21</h3>
-                    <p class="product-desc">Потужний процесор та неймовірна камера.</p>
-                    <span class="product-price">25 000 грн</span>
-                    <button class="btn-buy">Купити</button>
-                </article>
-
-                <article class="products-card">
-
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmF7ROju0dYMmBSejvtVCEAEdkJGClfLNOKA&s" alt="Product Name" class="product-img">
-                                <h3 class="product-title">Мультипіч Bosch MAF462B0</h3>
-                                <p class="product-desc">Lorem ipsum dolor sit amet. </p>
-                                <span class="product-price">5 000 грн</span>
-                                <button class="btn-buy">Купити</button>
-                </article>
-
-
-                <article class="products-card">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG2MPAuut5z7Ym7Gpm_-hg8DblPwVJSpjxRg&s" alt="Product Name" class="product-img">
-                                <h3 class="product-title">Електросамокат NAVEE GT3 MAX-E</h3>
-                                <p class="product-desc">Lorem ipsum dolor sit amet.</p>
-                                <span class="product-price">15 000 грн</span>
-                                <button class="btn-buy">Купити</button>
-                </article>
                 
+                <article class="products-card">
+                    <span class="product-badge badge-hot">Топ</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG2MPAuut5z7Ym7Gpm_-hg8DblPwVJSpjxRg&s" class="product-img" alt="Електросамокат NAVEE">
+                    <h3>Електросамокат NAVEE</h3>
+                    <p>Швидкий міський електросамокат.</p>
+                    <div class="product-footer">
+                        <span>15 000 грн</span>
+                        <button class="btn-buy">Купити</button>
+                    </div>
+                </article>
+
             </div>
-        </section>
-    
-    
+        </div>
+
+    </section>
 </main>
 
 <footer>
-    000-000-00-00 <br>
-    idk.whattoputhere@gmail.com <br>
-    &copy; 2025 TechShop
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h3>Контактна інформація</h3>
+            <p>000-000-00-00</p>
+            <p>shop@gmail.com</p>
+            <p>&copy; 2026 TechShop</p>
+        </div>
 
+        <div class="footer-section">
+            <h3>Ми в соцмережах</h3>
+            <nav>
+                <ul class="social-links">
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                        Instagram</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
+                        TikTok</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg> 
+                        Facebook</a></li>
+                </ul>
+            </nav>
+        </div>
 
-    <section>
-        <h2 id = "ci">Контактна іформація</h2>
-    </section>
-    <nav>
-      <ul>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">TikTok</a></li>
-        <li><a href="">FaceBook</a></li>
-        <li><a href="">Reddit</a></li>
-        <li><a href="">LinkedIn</a></li>
-      </ul>
-    </nav>
-    <br><br>
-    <form action="#">
-        <h3>Підписка на розсилку :3</h3>
-        <input type="email">
-        <button>Підписатися</button>
-    </form>
-    <br><br>
+        <div class="footer-section">
+            <h3>Підписка</h3>
+            <form class="footer-form">
+                <input type="email" placeholder="Ваш Email">
+                <button type="submit">OK</button>
+            </form>
+        </div>
+
+    </div>
 </footer>
 
 </body>
-
 </html>
