@@ -50,11 +50,10 @@ const products = [
 
 
 //обробка
-const container = document.querySelector("#grid");
+const container = document.querySelector(".products-grid");
 
 // Використовуємо .map() щоб перетворити масив об'єктів на масив HTML-рядків
-const htmlString = products
-  .map((product) => {
+const htmlString = products.map((product) => {
     return `
         <article class="product-card">
             <img src="${product.image}" alt="${product.title}">
